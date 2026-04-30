@@ -1,0 +1,19 @@
+int a;
+int b = 10;
+int a;
+
+b = 20;
+
+if (b == 20) {
+    c = 30;
+    return b;
+} else {
+    while (b > 0) {
+        b = b - 1;
+    }
+}
+
+int z = ;
+x = 5;
+
+return;

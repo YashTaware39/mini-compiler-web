@@ -1,0 +1,59 @@
+<!DOCTYPE next.js>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Compiler Web App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header>
+            <h1>Mini Compiler</h1>
+            <p>Lexical Analysis, Parser & Symbol Table</p>
+        </header>
+
+        <main>
+            <section class="editor-section panel">
+                <div class="panel-header">
+                    <h2>Source Code</h2>
+                    <button id="runBtn" class="btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                        </svg>
+                        Run Compiler
+                    </button>
+                </div>
+                <textarea id="codeInput" placeholder="Enter your C code here...&#10;Example:&#10;int a = 10;&#10;int b = a + 5;" spellcheck="false"></textarea>
+            </section>
+
+            <section class="results-layout">
+                <div class="panel tokens-panel">
+                    <div class="panel-header">
+                        <h2>Lexer: Tokens</h2>
+                    </div>
+                    <pre id="tokensOutput" class="console-output">(Awaiting compilation...)</pre>
+                </div>
+
+                <div class="panel parser-panel">
+                    <div class="panel-header">
+                        <h2>Syntax: Parsing Result</h2>
+                    </div>
+                    <pre id="parserOutput" class="console-output">(Awaiting compilation...)</pre>
+                </div>
+
+                <div class="panel symbol-panel">
+                    <div class="panel-header">
+                        <h2>Symbol Table</h2>
+                    </div>
+                    <pre id="symbolOutput" class="console-output">(Awaiting compilation...)</pre>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js?v=2"></script>
+</body>
+</html>
